@@ -20,6 +20,20 @@
 $ cargo add -D tide-testing
 ```
 
+## Example usage:
+
+```rust
+use tide::prelude::*;
+let mut app = tide::new();
+app.at("/").get(|_| async { Ok("hello!") });
+
+use tide_testing::TideTestingExt;
+assert_eq!(app.get("/").recv_string().await?, "hello!");
+assert_eq!(
+    app.post("/missing").await?.status(),
+    tide::http::StatusCode::NotFound
+);
+```
 
 ## Cargo Features:
 
