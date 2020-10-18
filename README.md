@@ -1,5 +1,5 @@
 # tide-testing
-## a convenient bridge between surf and tide to generate synthetic events for testing
+## a convenient bridge between surf and tide to generate synthetic requests for testing
 
 * [CI ![CI][ci-badge]][ci]
 * [API Docs][docs] [![docs.rs docs][docs-badge]][docs]

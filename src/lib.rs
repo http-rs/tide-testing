@@ -7,7 +7,7 @@
 )]
 //! # Tide Testing Extension Trait
 //!
-//! This trait provides an ergonomic extnsion for testing tide applications.
+//! This trait provides an ergonomic extension for testing tide applications.
 //!
 //! ## Usage:
 //!
