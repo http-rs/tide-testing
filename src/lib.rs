@@ -1,3 +1,10 @@
+#![forbid(unsafe_code, future_incompatible)]
+#![deny(
+    missing_debug_implementations,
+    nonstandard_style,
+    missing_copy_implementations,
+    unused_qualifications
+)]
 //! # Tide Testing Extension Trait
 //!
 //! This trait provides an ergonomic extnsion for testing tide applications.
