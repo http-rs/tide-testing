@@ -17,7 +17,6 @@
 //!
 //! ```rust
 //! # fn main() -> tide::Result<()> { async_std::task::block_on(async {
-//! use tide::prelude::*;
 //! let mut app = tide::new();
 //! app.at("/").get(|_| async { Ok("hello!") });
 //!

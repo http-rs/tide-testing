@@ -23,7 +23,6 @@ $ cargo add -D tide-testing
 ## Example usage:
 
 ```rust
-use tide::prelude::*;
 let mut app = tide::new();
 app.at("/").get(|_| async { Ok("hello!") });
 
