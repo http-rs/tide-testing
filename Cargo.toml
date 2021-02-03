@@ -12,10 +12,10 @@ keywords = ["tide", "surf", "http", "request", "testing"]
 categories = ["web-programming::http-server", "web-programming"]
 
 [dependencies]
-serde = "1.0.117"
-serde_json = "1.0.59"
+serde = "1.0.123"
+serde_json = "1.0.61"
 tide = { version = "0.16.0", default-features = false }
 surf = { version = "2.1.0", default-features = false }
 
 [dev-dependencies]
-async-std = { version = "1.7.0", features = ["attributes"] }
+async-std = { version = "1.9.0", features = ["attributes"] }
