@@ -17,21 +17,24 @@
 
 ## Installation
 ```
-$ cargo add -D tide-testing
+$ cargo add --dev tide-testing
 ```
 
 ## Example usage:
 
 ```rust
-let mut app = tide::new();
-app.at("/").get(|_| async { Ok("hello!") });
+#[async_std::test]
+async fn test_server() -> tide::Result<()> {
+    let mut app = tide::new();
+    app.at("/").get(|_| async { Ok("hello!") });
 
-use tide_testing::TideTestingExt;
-assert_eq!(app.get("/").recv_string().await?, "hello!");
-assert_eq!(
-    app.post("/missing").await?.status(),
-    tide::http::StatusCode::NotFound
-);
+    use tide_testing::TideTestingExt;
+    assert_eq!(app.get("/").recv_string().await?, "hello!");
+    assert_eq!(
+        app.post("/missing").await?.status(),
+        tide::http::StatusCode::NotFound
+    );
+}
 ```
 
 ## Cargo Features:
